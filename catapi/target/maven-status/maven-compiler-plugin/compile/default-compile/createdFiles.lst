@@ -1,0 +1,10 @@
+projetos_Agnes_Costa_Macedo\catapi\model\CatImageApiResponse.class
+projetos_Agnes_Costa_Macedo\catapi\service\CatApiService.class
+projetos_Agnes_Costa_Macedo\catapi\ingest\CatIngestServer.class
+projetos_Agnes_Costa_Macedo\catapi\CatapiApplication.class
+projetos_Agnes_Costa_Macedo\catapi\model\CatBreedApiResponse.class
+projetos_Agnes_Costa_Macedo\catapi\controller\CatController.class
+projetos_Agnes_Costa_Macedo\catapi\repository\CatBreedRepository.class
+projetos_Agnes_Costa_Macedo\catapi\model\CatBreed.class
+projetos_Agnes_Costa_Macedo\catapi\model\CatImage.class
+projetos_Agnes_Costa_Macedo\catapi\repository\CatImageRepository.class

@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: catdb
+      POSTGRES_USER: agnescostam
+      POSTGRES_PASSWORD: '#Metas1403'
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - CAT_API_KEY=live_MgmISyqjKq3jC482vJhYwRJX0MeHWmTh8SDWQ3OhnviHWfa9nQZ4RJtp4bsgLu2m
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/catdb
+      - SPRING_DATASOURCE_USERNAME=agnescostam
+      - SPRING_DATASOURCE_PASSWORD=#Metas1403
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_SHOW_SQL=true
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
